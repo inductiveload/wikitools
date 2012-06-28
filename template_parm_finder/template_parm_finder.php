@@ -3,11 +3,11 @@
 $isToolserver = in_array(gethostname(), array('nightshade', 'willow'));
 
 if ($isToolserver) {
-	mysql_connect('enwikisource-p.db.toolserver.org', $toolserver_username, $toolserver_password);
-	@mysql_select_db('enwikisource_p') or die(mysql_error());
+	$database_host = 'enwikisource-p.db.toolserver.org';
+	$database = 'enwikisource_p';
+	
+	require_once('/home/'.get_current_user().'/database.inc');
 } else {
-	//mysql_connect('localhost', '', '');
-	//@mysql_select_db('enwikisource') or die(mysql_error());
 	$database_host = 'localhost';
 	$database = 'enwikisource';
 	$toolserver_username = '';
