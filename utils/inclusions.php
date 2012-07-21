@@ -11,7 +11,7 @@ class Inclusions
 		if (True) { ?>
 			<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 			<link href="<?php echo $tsindl_root?>utils/style.css" type='text/css' rel='stylesheet'>
-			<link rel="shortcut icon" href="<?php echo $tsindl_root?>/images/Toolserver%20logo%20modified.ico" />
+			<link rel="shortcut icon" href="<?php echo $tsindl_root?>images/Toolserver_IL.ico" />
 		<?php }
 	}
 	
@@ -26,6 +26,7 @@ class Inclusions
 				<ul>
 					<li><a href="<?php echo $tsindl_root?>wmf-qrcode">QR codes</a></li>
 					<li><a href="<?php echo $tsindl_root?>template-finder">Template finder</a></li>
+					<li><a href="<?php echo $tsindl_root?>data-scrapers">Data scrapers</a></li>
 				</ul>
 				
 				<h5>Other</h5>
@@ -54,5 +55,15 @@ class Inclusions
 		<?php } 
 	}
 	
+	function jQuery($version='1.7.2'){
+		echo "<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/$version/jquery.min.js'></script>"; 
+	}
+
+	function JS($path=Null){
+		global $tsindl_root;
+		if ($path !== Null) {
+			echo "<script type='text/javascript' src='{$tsindl_root}utils/$path'></script>"; 
+		}
+	}
 }
 ?>

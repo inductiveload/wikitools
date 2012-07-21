@@ -48,9 +48,9 @@ include_once('utils/inclusions.php');
 			</ul>
 			
 			<h2>Generator</h2>
-			You can use this form to generate the link to a set of results.</br></br>
+			You can use this form to generate the link to a set of results.
 			
-			<form style="padding-left:1em;">
+			<form class="inputarea">
 				
 				<table class="form_table">
 					<tr>

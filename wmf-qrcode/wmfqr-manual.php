@@ -39,9 +39,9 @@ include_once('utils/inclusions.php');
 			</ul>
 			
 			<h2>Generator</h2>
-			You can use this form to generate a QR code image.</br></br>
+			You can use this form to generate a QR code image.
 			
-			<form style="padding-left:1em;">
+			<form class="inputarea">
 				
 			URL:
 			<input type="text" style="width:50em;" name="data" value="http://en.m.wikipedia.org/QR code" /><br>
